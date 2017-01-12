@@ -16,9 +16,6 @@
 ## netflix-feign
 1. netflix-feign
 
-## netflix-feign
-1. netflix-feign
-
 ## netflix-hystrix
 1. netflix-hystrix
 2. netflix-hystrix-dashboard
