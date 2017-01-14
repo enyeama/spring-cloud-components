@@ -1,0 +1,16 @@
+server:
+  port: 8989
+eureka:
+  instance:
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:7777/eureka/,http://localhost:8888/eureka/,http://localhost:9999/eureka/
+turbine:
+  aggregator:
+    clusterConfig: MAIN
+  appConfig: node01,time01,swagger2,eureka-hystrix,application-scheduler
+  clusterNameExpression: metadata['cluster']
