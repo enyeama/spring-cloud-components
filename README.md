@@ -18,8 +18,8 @@
 
 ## netflix-hystrix
 1. netflix-hystrix
-2. netflix-hystrix-dashboard
-3. netflix-turbine
+2. hystrix-dashboard
+3. turbine
 
 ## netflix-zuul
 1. netflix-zuul
