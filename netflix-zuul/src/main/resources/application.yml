@@ -1,0 +1,30 @@
+server:
+  port: 10000
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7777/eureka/,http://localhost:8888/eureka/,http://localhost:9999/eureka/
+  instance:
+    hostname: localhost
+zuul:
+  ignored-services: "*"
+  routes:
+    name:
+      path: /name/**
+      url: http://localhost:12345/name
+    age:
+      path: /age/**
+      url: http://localhost:12346/age
+    city:
+      path: /city/**
+      url: http://localhost:12347/city
+    author:
+      path: /author/**
+      url: http://localhost:12348/author
+    user:
+      path: /users/**
+      service-id: SWAGGER2
+      strip-prefix: false
+      
+    

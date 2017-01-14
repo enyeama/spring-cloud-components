@@ -1,0 +1,10 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7777/eureka/,http://localhost:8888/eureka/,http://localhost:9999/eureka/
+  instance:
+    hostname: localhost
+    metadata-map: 
+      cluster: MAIN
+server:
+  port: 30300

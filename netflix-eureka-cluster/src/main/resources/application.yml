@@ -1,0 +1,51 @@
+spring:
+  profiles:
+    active: tertiary
+    
+---
+spring:
+  application:
+    name: eureka-server-clustered   
+  profiles: primary
+server:
+  port: 7777  
+eureka:
+  instance:
+    hostname: eureka-primary       
+  client:
+    registerWithEureka: true
+    fetchRegistry: true        
+    serviceUrl:
+      defaultZone: http://eureka-secondary:8888/eureka/,http://eureka-tertiary:9999/eureka/
+
+---
+spring:
+  application:
+    name: eureka-server-clustered      
+  profiles: secondary
+server:
+  port: 8888
+eureka:
+  instance:
+    hostname: eureka-secondary       
+  client:
+    registerWithEureka: true
+    fetchRegistry: true        
+    serviceUrl:
+      defaultZone: http://eureka-tertiary:9999/eureka/,http://eureka-primary:7777/eureka/
+
+---
+spring:
+  application:
+    name: eureka-server-clustered      
+  profiles: tertiary
+server:
+  port: 9999
+eureka:
+  instance:
+    hostname: eureka-tertiary       
+  client:
+    registerWithEureka: true
+    fetchRegistry: true    
+    serviceUrl:
+      defaultZone: http://eureka-primary:7777/eureka/,http://eureka-secondary:8888/eureka/      
