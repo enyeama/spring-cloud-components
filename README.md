@@ -1,7 +1,9 @@
 # spring-cloud-components
 
-## spring-cloud-config
+## spring-boot
+1. springboot-restful-api
 
+## spring-cloud-config
 1. cloud-config-server
 2. cloud-config-client
 
@@ -18,8 +20,8 @@
 
 ## netflix-hystrix
 1. netflix-hystrix
-2. netflix-hystrix-dashboard
-3. netflix-turbine
+2. hystrix-dashboard
+3. turbine
 
 ## netflix-zuul
 1. netflix-zuul
