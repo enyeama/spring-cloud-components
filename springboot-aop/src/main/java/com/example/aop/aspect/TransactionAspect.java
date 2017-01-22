@@ -44,7 +44,7 @@ public class TransactionAspect extends Transaction {
 	}
 
 	/**
-	 * 配置环绕切面
+	 * 配置环绕通知
 	 * 
 	 * @param pjp
 	 * @return
