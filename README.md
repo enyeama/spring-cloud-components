@@ -1,7 +1,9 @@
 # spring-cloud-components
 
 ## spring-boot
-1. springboot-restful-api
+1. springboot-aop
+2. springboot-restful-api
+
 
 ## spring-cloud-config
 1. cloud-config-server
@@ -32,3 +34,5 @@
 3. application-list-swagger
 4. application-list-task
 5. application-list-scheduler
+
+###### Maven Archetypes Catelogs: http://repo1.maven.org/maven2/archetype-catalog.xml
